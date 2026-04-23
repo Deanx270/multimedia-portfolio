@@ -6,10 +6,8 @@
     <title>Rotoscoping Progress | Dean</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script src="tailwind-theme.js"></script>
     <link rel="stylesheet" href="styles.css">
-    
     <script src="navbar.js" defer></script>
 </head>
 <body class="antialiased relative min-h-screen flex flex-col overflow-x-hidden font-sans">
@@ -17,28 +15,28 @@
     <portfolio-nav></portfolio-nav>
 
     <main class="flex-grow pt-32 pb-20 px-6">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-6xl mx-auto w-full">
             
-            <div class="mb-12 text-center">
-                <div class="inline-flex items-center gap-3 mb-4">
-                    <span class="w-6 h-[1px] bg-brand-accent"></span>
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-12 h-[1px] bg-brand-accent"></span>
                     <span class="text-brand-accent text-xs font-bold uppercase tracking-widest">Phase 1</span>
-                    <span class="w-6 h-[1px] bg-brand-accent"></span>
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold text-brand-ink mb-4 tracking-tight">Rotoscoping <span class="italic font-light text-gray-500">Progress.</span></h2>
-                <p class="text-gray-600 font-light max-w-2xl mx-auto leading-relaxed">
+                <p class="text-gray-600 font-light max-w-2xl leading-relaxed">
                     The raw video reference serving as the foundation for the upcoming frame-by-frame authoring workload.
                 </p>
             </div>
 
-            <div class="premium-card p-4 md:p-8">
+            <div class="premium-card p-4 md:p-8 mb-16 w-full">
                 <div class="flex items-center justify-between mb-6">
                     <h3 class="text-lg font-bold text-brand-ink tracking-wide">Reference Footage</h3>
                     <span class="px-3 py-1 bg-brand-accent/10 text-brand-accent text-xs font-bold rounded uppercase tracking-widest">Source</span>
                 </div>
                 
-                <div class="video-wrapper">
+                <div class="video-wrapper aspect-video w-full rounded-lg overflow-hidden bg-gray-100">
                     <iframe 
+                        class="w-full h-full"
                         src="https://www.youtube.com/embed/n7jlLDEBC4M" 
                         title="YouTube video player" 
                         frameborder="0" 
@@ -46,6 +44,106 @@
                         allowfullscreen>
                     </iframe>
                 </div>
+            </div>
+
+            <div class="mb-8 pt-4 border-t border-gray-100">
+                <h3 class="text-3xl font-bold text-brand-ink tracking-tight mb-2">Weekly Evolution</h3>
+                <p class="text-gray-600 font-light">Documenting the style progression and frame-by-frame rendering throughout the term.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 1</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100 relative">
+                        <iframe 
+                            class="w-full h-full absolute top-0 left-0" 
+                            src="https://www.youtube.com/embed/dklRjLmDmHw" 
+                            title="Week 1 Progress" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 2</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 2 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 3</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 3 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 4</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 4 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 5</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 5 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 6</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 6 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 7</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 7 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 8</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 8 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 9</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 9 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 10</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 10 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 11</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 11 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="premium-card p-4">
+                    <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 12</h4>
+                    <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
+                        <iframe class="w-full h-full" src="" title="Week 12 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
             </div>
 
         </div>
