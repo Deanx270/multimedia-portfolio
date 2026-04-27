@@ -6,11 +6,11 @@
     <title>Dean | Multimedia Portfolio</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script src="tailwind-theme.js"></script>
     <link rel="stylesheet" href="styles.css">
     
     <script src="navbar.js" defer></script>
+    <script src="footer.js" defer></script> 
 </head>
 <body class="antialiased relative min-h-screen flex flex-col overflow-x-hidden font-sans">
     
@@ -26,7 +26,7 @@
                 </div>
                 
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-brand-ink mb-6 leading-[1.1] tracking-tight">
-                    Life in 
+                    Life in <br />
                     <span class="italic font-light text-gray-500">Active Frames.</span>
                 </h1>
                 
@@ -44,21 +44,23 @@
 
             <div class="relative w-full aspect-[4/3] image-frame bg-gray-200">
                 <img 
-                    src="your-image.jpg" 
+                    src="assets/rotoscoping_reference.png" 
                     alt="Rotoscoping reference frame" 
                     class="w-full h-full object-cover"
-                >
+                />
                 
                 <div class="absolute inset-0 bg-gradient-to-tr from-brand-ink/20 to-transparent"></div>
                 
                 <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded shadow-sm flex items-center gap-3">
                     <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                    <span class="text-xs font-bold tracking-widest text-brand-ink uppercase">Phase 1: Raw Footage</span>
+                    <span class="text-xs font-bold tracking-widest text-brand-ink uppercase">Raw Reference Footage</span>
                 </div>
             </div>
 
         </div>
     </main>
+
+    <portfolio-footer></portfolio-footer>
 
 </body>
 </html>

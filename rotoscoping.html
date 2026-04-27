@@ -8,7 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind-theme.js"></script>
     <link rel="stylesheet" href="styles.css">
+    
     <script src="navbar.js" defer></script>
+    <script src="footer.js" defer></script> 
 </head>
 <body class="antialiased relative min-h-screen flex flex-col overflow-x-hidden font-sans">
     
@@ -20,18 +22,53 @@
             <div class="mb-12">
                 <div class="flex items-center gap-3 mb-4">
                     <span class="w-12 h-[1px] bg-brand-accent"></span>
-                    <span class="text-brand-accent text-xs font-bold uppercase tracking-widest">Phase 1</span>
+                    <span class="text-brand-accent text-xs font-bold uppercase tracking-widest">Project Workflow</span>
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold text-brand-ink mb-4 tracking-tight">Rotoscoping <span class="italic font-light text-gray-500">Progress.</span></h2>
                 <p class="text-lg md:text-xl text-gray-600 font-light max-w-2xl leading-relaxed">
-                    The raw video reference serving as the foundation for the upcoming frame-by-frame authoring workload.
+                    A frame-by-frame exploration of visual storytelling, shifting aesthetic styles every 5 seconds while maintaining kinetic consistency.
                 </p>
+            </div>
+
+            <div class="mb-16">
+                <div class="premium-card p-4 md:p-8 w-full border-t-4 border-brand-accent bg-white shadow-xl shadow-gray-200/50">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-brand-ink tracking-tight">The Final Synthesis</h3>
+                        <span class="px-3 py-1 bg-brand-ink text-white text-xs font-bold rounded uppercase tracking-widest flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                            Final Output
+                        </span>
+                    </div>
+                    
+                    <div class="video-wrapper aspect-video w-full rounded-lg overflow-hidden bg-brand-ink mb-6">
+                        <iframe 
+                            class="w-full h-full"
+                            src="https://www.youtube.com/embed/8G7pYSaqYt8" 
+                            title="Final Rotoscoping Output" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="bg-gray-50 border border-gray-100 rounded-md p-4 flex gap-4 items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div>
+                            <h4 class="text-sm font-bold text-brand-ink uppercase tracking-wider mb-1">Educational Fair Use</h4>
+                            <p class="text-xs text-gray-500 leading-relaxed">
+                                This multimedia project was created strictly for non-commercial, educational purposes as a demonstration of authoring, compositing, and rotoscoping techniques. All original choreography and audio rights belong to their respective copyright holders.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="premium-card p-4 md:p-8 mb-16 w-full">
                 <div class="flex items-center justify-between mb-6">
                     <h3 class="text-lg font-bold text-brand-ink tracking-wide">Reference Footage</h3>
-                    <span class="px-3 py-1 bg-brand-accent/10 text-brand-accent text-xs font-bold rounded uppercase tracking-widest">Source</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-500 text-xs font-bold rounded uppercase tracking-widest">Source</span>
                 </div>
                 
                 <div class="video-wrapper aspect-video w-full rounded-lg overflow-hidden bg-gray-100">
@@ -53,19 +90,12 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-10">
                 
                 <div class="premium-card p-4">
                     <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 1</h4>
                     <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100 relative">
-                        <iframe 
-                            class="w-full h-full absolute top-0 left-0" 
-                            src="https://www.youtube.com/embed/dklRjLmDmHw" 
-                            title="Week 1 Progress" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe class="w-full h-full absolute top-0 left-0" src="https://www.youtube.com/embed/dklRjLmDmHw" title="Week 1 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -79,35 +109,35 @@
                 <div class="premium-card p-4">
                     <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 3</h4>
                     <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
-                        <iframe class="w-full h-full" src="" title="Week 3 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/8rFb6eHxPhc" title="Week 3 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
                 <div class="premium-card p-4">
                     <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 4</h4>
                     <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
-                        <iframe class="w-full h-full" src="" title="Week 4 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ay0xq3a4BfU" title="Week 4 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
                 <div class="premium-card p-4">
                     <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 5</h4>
                     <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
-                        <iframe class="w-full h-full" src="" title="Week 5 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/T3qF7W7A1OY" title="Week 5 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
                 <div class="premium-card p-4">
                     <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 6</h4>
                     <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
-                        <iframe class="w-full h-full" src="" title="Week 6 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/u8xnSy6rQaI" title="Week 6 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
                 <div class="premium-card p-4">
                     <h4 class="text-sm font-bold text-brand-ink tracking-widest uppercase mb-3">Week 7</h4>
                     <div class="video-wrapper aspect-video w-full rounded-md overflow-hidden bg-gray-50 border border-gray-100">
-                        <iframe class="w-full h-full" src="" title="Week 7 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/0EuFB_fsJ0U" title="Week 7 Progress" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -150,6 +180,8 @@
 
         </div>
     </main>
+
+    <portfolio-footer></portfolio-footer>
 
 </body>
 </html>
