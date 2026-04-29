@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
     
     <script src="navbar.js" defer></script>
+    <script src="footer.js" defer></script> 
 </head>
 <body class="antialiased relative min-h-screen flex flex-col overflow-x-hidden font-sans">
     
@@ -80,6 +81,32 @@
 
             <div class="mb-12 border-b border-brand-border pb-4">
                 <h2 class="text-3xl font-bold text-brand-ink">Celestial <span class="italic font-light text-gray-500">Bodies.</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-10 items-center mb-16">
+                <div class="lg:col-span-1 premium-card p-2">
+                    <div class="aspect-square relative overflow-hidden rounded bg-brand-ink">
+                        <video class="absolute inset-0 w-full h-full object-cover rounded" preload="metadata" autoplay loop muted playsinline>
+                            <source src="assets/Sun_Render.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 py-2">
+                    <div class="inline-flex items-center gap-2 mb-2">
+                        <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                        <span class="text-gray-500 text-xs font-bold uppercase tracking-widest">Star (Yellow Dwarf)</span>
+                    </div>
+                    <h3 class="text-4xl font-bold text-brand-ink mb-4">The Sun</h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">
+                        The star at the center of the Solar System. Its immense gravitational pull dictates the orbital mechanics of all other celestial bodies, serving as the static origin point (0,0,0) in the Python animation script.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-sm">
+                        <div class="flex justify-between gap-4 border-b border-brand-border pb-2"><span class="text-gray-500">Diameter</span><span class="font-medium text-brand-ink text-right">1.39M km</span></div>
+                        <div class="flex justify-between gap-4 border-b border-brand-border pb-2"><span class="text-gray-500">Surface Temp</span><span class="font-medium text-brand-ink text-right">5,500 °C</span></div>
+                        <div class="flex justify-between gap-4 border-b border-brand-border pb-2"><span class="text-gray-500">System Mass</span><span class="font-medium text-brand-ink text-right">99.86%</span></div>
+                        <div class="flex justify-between gap-4 border-b border-brand-border pb-2"><span class="text-gray-500">Rotation</span><span class="font-medium text-brand-ink text-right">27 Earth Days</span></div>
+                    </div>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-10 items-center mb-16">
@@ -369,5 +396,6 @@
             });
         }
     </script>
+    <portfolio-footer></portfolio-footer>
 </body>
 </html>
