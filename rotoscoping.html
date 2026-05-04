@@ -13,9 +13,7 @@
     <script src="footer.js" defer></script> 
 </head>
 <body class="antialiased relative min-h-screen flex flex-col overflow-x-hidden font-sans">
-    
     <portfolio-nav></portfolio-nav>
-
     <main class="flex-grow pt-32 pb-20 px-6">
         <div class="max-w-6xl mx-auto w-full">
             
@@ -83,7 +81,9 @@
                 </div>
             </div>
 
+            <!-- AUTHORING PIPELINE -->
             <div class="mb-16">
+                <!-- Section Header -->
                 <div class="mb-8 border-b border-brand-border pb-4">
                     <h3 class="text-3xl font-bold text-brand-ink tracking-tight mb-2">Authoring <span class="italic font-light text-gray-500">Pipeline.</span></h3>
                     <p class="text-lg text-gray-600 font-light">
@@ -91,23 +91,33 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 2x2 Grid for the 4 Steps -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Step 1 -->
                     <div class="premium-card p-6 border-t-4 border-t-brand-ink flex flex-col h-full">
+                        <div class="w-full aspect-video bg-gray-100 rounded-md overflow-hidden mb-6">
+                            <img src="assets/step1.png" alt="Background Removal" class="w-full h-full object-cover">
+                        </div>
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-12 h-12 rounded bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden p-2">
                                 <img src="assets/icon-aftereffects.png" alt="After Effects" class="w-full h-full object-contain">
                             </div>
                             <div>
                                 <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">Step 01</h4>
-                                <h3 class="text-xl font-bold text-brand-ink leading-tight">Frame Extraction & Masking</h3>
+                                <h3 class="text-xl font-bold text-brand-ink leading-tight">Background Removal</h3>
                             </div>
                         </div>
                         <p class="text-base text-gray-600 leading-relaxed font-light mt-3">
-                            The raw footage was broken down into individual frames. Using <strong>Adobe After Effects</strong>, the subject's kinetic motion and structural outline were carefully masked and rotoscoped to isolate the figure from the original raw background.
+                            The raw footage was broken down into individual frames. Using <strong>Adobe After Effects</strong>, the subject's kinetic motion and structural outline were carefully masked and rotoscoped to isolate the figure and remove the original background.
                         </p>
                     </div>
 
+                    <!-- Step 2 -->
                     <div class="premium-card p-6 border-t-4 border-t-brand-ink flex flex-col h-full">
+                        <div class="w-full aspect-video bg-gray-100 rounded-md overflow-hidden mb-6">
+                            <img src="assets/step2.png" alt="Style and Texture Application" class="w-full h-full object-cover">
+                        </div>
                         <div class="flex items-center gap-4 mb-4">
                             <div class="flex gap-2 shrink-0">
                                 <div class="w-10 h-10 rounded bg-gray-100 flex items-center justify-center overflow-hidden p-1.5">
@@ -119,28 +129,57 @@
                             </div>
                             <div>
                                 <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">Step 02</h4>
-                                <h3 class="text-xl font-bold text-brand-ink leading-tight">Stylization & Effects</h3>
+                                <h3 class="text-xl font-bold text-brand-ink leading-tight">Style & Texture Application</h3>
                             </div>
                         </div>
                         <p class="text-base text-gray-600 leading-relaxed font-light mt-3">
-                            The isolated sequences were imported into <strong>Canva</strong> for rapid color-blocking and vector alignment. To achieve complex, shifting aesthetics (like glitches, halftones, and blooms), frames were routed through various <strong>specialized web-based effect generators</strong> before final export.
+                            The isolated sequences were imported into <strong>Canva</strong> for rapid color-blocking and vector alignment. To achieve complex, shifting aesthetics, frames were routed through various <strong>specialized web-based effect generators</strong> before final export.
                         </p>
                     </div>
 
+                    <!-- Step 3 -->
                     <div class="premium-card p-6 border-t-4 border-t-brand-ink flex flex-col h-full">
+                        <div class="w-full aspect-video bg-gray-100 rounded-md overflow-hidden mb-6">
+                            <img src="assets/step3.png" alt="Background Replacement" class="w-full h-full object-cover">
+                        </div>
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-12 h-12 rounded bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden p-2">
                                 <img src="assets/icon-powerdirector.png" alt="PowerDirector" class="w-full h-full object-contain">
                             </div>
                             <div>
                                 <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">Step 03</h4>
-                                <h3 class="text-xl font-bold text-brand-ink leading-tight">Assembly & Compositing</h3>
+                                <h3 class="text-xl font-bold text-brand-ink leading-tight">Background Replacement</h3>
                             </div>
                         </div>
                         <p class="text-base text-gray-600 leading-relaxed font-light mt-3">
-                            The finalized style sequences were brought into <strong>PowerDirector</strong>. Utilizing the <em>Chroma Key</em> tool and blending modes, the clean frames were seamlessly composited over dynamic background layers and meticulously synced to the master audio track.
+                            The finalized style sequences were brought into <strong>PowerDirector</strong>. Utilizing the <em>Chroma Key</em> tool, the green screen backgrounds were keyed out, and the clean frames were seamlessly composited over new, dynamically generated environments.
                         </p>
                     </div>
+
+                    <!-- Step 4 -->
+                    <div class="premium-card p-6 border-t-4 border-t-brand-ink flex flex-col h-full">
+                        <div class="w-full aspect-video bg-gray-100 rounded-md overflow-hidden mb-6">
+                            <img src="assets/step4.png" alt="Applying Effects" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="flex gap-2 shrink-0">
+                                <div class="w-10 h-10 rounded bg-gray-100 flex items-center justify-center overflow-hidden p-1.5">
+                                    <img src="assets/icon-powerdirector.png" alt="PowerDirector" class="w-full h-full object-contain">
+                                </div>
+                                <div class="w-10 h-10 rounded bg-gray-100 flex items-center justify-center overflow-hidden p-1.5">
+                                    <img src="assets/icon-webtools.png" alt="Web Tools" class="w-full h-full object-contain">
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">Step 04</h4>
+                                <h3 class="text-xl font-bold text-brand-ink leading-tight">Final Effects & Polish</h3>
+                            </div>
+                        </div>
+                        <p class="text-base text-gray-600 leading-relaxed font-light mt-3">
+                            The final composite was enhanced with post-processing effects—such as optical glows, visual distortions, and color grading—to unify the layers and meticulously sync the kinetic motion to the master audio track.
+                        </p>
+                    </div>
+
                 </div>
             </div>
 
@@ -241,8 +280,6 @@
 
         </div>
     </main>
-
     <portfolio-footer></portfolio-footer>
-
 </body>
 </html>
