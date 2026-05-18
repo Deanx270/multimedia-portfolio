@@ -120,9 +120,8 @@
         
         <div id="scroll-track" class="relative h-[400vh] w-full">
             <div class="sticky top-0 h-screen w-full overflow-hidden bg-black flex items-center justify-center">
-                
-                <video id="hero-video" class="absolute top-0 left-0 w-full h-full object-cover" muted playsinline preload="auto"></video>
-                
+                <canvas id="hero-canvas" class="absolute top-0 left-0 w-full h-full object-cover"></canvas>
+
                 <div id="intro-overlay" class="absolute inset-0 flex flex-col justify-center px-24 z-10 will-change-opacity bg-gradient-to-r from-black/95 via-black/60 to-black/0">
                     <div class="max-w-3xl text-left">
                         <div class="inline-flex items-center gap-4 mb-6">
@@ -190,30 +189,51 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-             
             if (window.innerWidth > 768) {
                 const track = document.getElementById('scroll-track');
-                const video = document.getElementById('hero-video');
+                const canvas = document.getElementById('hero-canvas');
+                const context = canvas.getContext('2d');
                 const introOverlay = document.getElementById('intro-overlay');
                 const ctaOverlay = document.getElementById('cta-overlay');
                 const endOverlay = document.getElementById('end-overlay');
-     
-                const videoUrl = "assets/desktop_bg.mp4"; 
-                
-                fetch(videoUrl)
-                    .then(response => response.blob())
-                    .then(blob => { 
-                        video.src = URL.createObjectURL(blob);
-                        video.addEventListener('loadedmetadata', updateOnScroll);
-                    })
-                    .catch(error => console.error("Error loading video:", error));
+                const frameCount = 426;  
+                const fps = 30;       
+                const pauseAtSecond = 8.0; 
+                const pauseFrame = Math.floor(pauseAtSecond * fps); 
+ 
+                canvas.width = 1920;
+                canvas.height = 1080;
+
+                const currentFramePath = (index) => `/assets/frames/frame_${index.toString().padStart(4, '0')}.jpg`;
+                const images = [];
+ 
+                const img0 = new Image();
+                img0.src = currentFramePath(1);
+                img0.onload = () => {
+                    context.drawImage(img0, 0, 0, canvas.width, canvas.height);
+                };
+                images[1] = img0;
+ 
+                for (let i = 2; i <= frameCount; i++) {
+                    const img = new Image();
+                    img.src = currentFramePath(i);
+                    images[i] = img;
+                }
 
                 function mapRange(value, inMin, inMax) {
                     return Math.max(0, Math.min(1, (value - inMin) / (inMax - inMin)));
                 }
+ 
+                function drawFrame(frameIndex) { 
+                    frameIndex = Math.max(1, Math.min(frameIndex, frameCount));
+                     
+                    if (images[frameIndex] && images[frameIndex].complete) {
+                        context.drawImage(images[frameIndex], 0, 0, canvas.width, canvas.height);
+                    }
+                }
 
                 function updateOnScroll() { 
-                    if (window.innerWidth <= 768 || !video.duration) return;
+                    if (window.innerWidth <= 768) return;
 
                     const trackRect = track.getBoundingClientRect();
                     const scrollableDistance = trackRect.height - window.innerHeight;
@@ -222,34 +242,36 @@
 
                     const phase1End = 0.35; 
                     const phase2End = 0.65; 
-                    const pauseVideoAtSecond = 8.0; 
-     
+
                     introOverlay.style.opacity = 1 - mapRange(progress, 0, 0.15);
                     introOverlay.style.pointerEvents = introOverlay.style.opacity > 0.5 ? "auto" : "none";
-
+ 
                     if (progress <= phase1End) {
                         let localProgress = mapRange(progress, 0, phase1End);
-                        video.currentTime = localProgress * pauseVideoAtSecond;
+                        let targetFrame = 1 + Math.floor(localProgress * (pauseFrame - 1));
+                        
+                        drawFrame(targetFrame);
                         
                         ctaOverlay.style.opacity = 0;
                         endOverlay.style.opacity = 0;
-
+ 
                     } else if (progress > phase1End && progress <= phase2End) {
-                        video.currentTime = pauseVideoAtSecond;
+                        drawFrame(pauseFrame);
                         
                         let fadeIn = mapRange(progress, phase1End, phase1End + 0.07);
                         let fadeOut = 1 - mapRange(progress, phase2End - 0.07, phase2End);
                         
                         ctaOverlay.style.opacity = Math.min(fadeIn, fadeOut);
                         endOverlay.style.opacity = 0;
-
+ 
                     } else {
                         let localProgress = mapRange(progress, phase2End, 1);
-                        let remainingTime = video.duration - pauseVideoAtSecond;
+                        let remainingFrames = frameCount - pauseFrame;
+                        let targetFrame = pauseFrame + Math.floor(localProgress * remainingFrames);
                         
-                        video.currentTime = pauseVideoAtSecond + (localProgress * remainingTime * 0.99);
+                        drawFrame(targetFrame);
+                        
                         ctaOverlay.style.opacity = 0;
-                        
                         endOverlay.style.opacity = mapRange(progress, 0.85, 1);
                     }
 
@@ -258,6 +280,7 @@
                 }
 
                 window.addEventListener('scroll', () => window.requestAnimationFrame(updateOnScroll));
+                 
                 updateOnScroll(); 
             }
         });
