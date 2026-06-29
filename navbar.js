@@ -3,6 +3,7 @@ class PortfolioNav extends HTMLElement {
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         
         const homeClass = currentPage === 'index.html' ? 'text-brand-accent' : 'text-gray-500';
+        const aboutClass = currentPage === 'about.html' ? 'text-brand-accent' : 'text-gray-500';
         const rotoClass = currentPage === 'rotoscoping.html' ? 'text-brand-accent' : 'text-gray-500';
         const solarClass = currentPage === 'solar-system.html' ? 'text-brand-accent' : 'text-gray-500';
 
@@ -16,6 +17,7 @@ class PortfolioNav extends HTMLElement {
                     
                     <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
                         <a href="index.html" class="${homeClass} transition-colors">Home</a>
+                        <a href="about.html" class="${aboutClass} transition-colors">About</a>
                         <a href="rotoscoping.html" class="${rotoClass} transition-colors">Rotoscoping</a>
                         <a href="solar-system.html" class="${solarClass} transition-colors">Solar System</a>
                     </div>
@@ -30,6 +32,7 @@ class PortfolioNav extends HTMLElement {
 
                 <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#FDFCF8]/95 backdrop-blur-md border-b border-brand-border shadow-lg flex-col py-4 px-6 space-y-4 text-sm font-medium tracking-wide">
                     <a href="index.html" class="block w-full ${homeClass} transition-colors">Home</a>
+                    <a href="about.html" class="block w-full ${aboutClass} transition-colors">About</a>
                     <a href="rotoscoping.html" class="block w-full ${rotoClass} transition-colors">Rotoscoping</a>
                     <a href="solar-system.html" class="block w-full ${solarClass} transition-colors">Solar System</a>
                 </div>

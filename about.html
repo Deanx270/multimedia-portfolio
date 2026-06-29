@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Dean</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-theme.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="navbar.js" defer></script>
+    <script src="footer.js" defer></script> 
+</head>
+<body class="antialiased relative min-h-screen flex flex-col overflow-x-hidden font-sans">
+    <portfolio-nav></portfolio-nav>
+    <main class="flex-grow pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto w-full">
+            
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-12 h-[1px] bg-brand-accent"></span>
+                    <span class="text-brand-accent text-xs font-bold uppercase tracking-widest">Developer & Designer</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-brand-ink mb-4 tracking-tight">About <span class="italic font-light text-gray-500">Me.</span></h2>
+            </div>
+
+            <!-- Core Technical Stack -->
+            <div class="mb-16">
+                <div class="mb-8 border-b border-brand-border pb-4">
+                    <h3 class="text-3xl font-bold text-brand-ink tracking-tight mb-2">Core Technical <span class="italic font-light text-gray-500">Stack.</span></h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="premium-card p-6 border-t-4 border-t-brand-ink flex flex-col h-full bg-white shadow-xl shadow-gray-200/50">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-ink leading-tight">Web Development</h3>
+                            </div>
+                        </div>
+                        <p class="text-base text-gray-600 leading-relaxed font-light mt-3">
+                            Laravel, PHP, MySQL, Eloquent ORM, Database Migrations, Laravel Scout.
+                        </p>
+                    </div>
+
+                    <div class="premium-card p-6 border-t-4 border-t-brand-ink flex flex-col h-full bg-white shadow-xl shadow-gray-200/50">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-ink leading-tight">Embedded Systems</h3>
+                            </div>
+                        </div>
+                        <p class="text-base text-gray-600 leading-relaxed font-light mt-3">
+                            C++, Arduino Uno, ESP32, Circuitry & Sensor Integration.
+                        </p>
+                    </div>
+
+                    <div class="premium-card p-6 border-t-4 border-t-brand-ink flex flex-col h-full bg-white shadow-xl shadow-gray-200/50">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-ink leading-tight">Multimedia & Design</h3>
+                            </div>
+                        </div>
+                        <p class="text-base text-gray-600 leading-relaxed font-light mt-3">
+                            Adobe After Effects, PowerDirector, Canva, Digital Compositing & Rotoscoping.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Featured Projects -->
+            <div class="mb-16">
+                <div class="mb-8 border-b border-brand-border pb-4">
+                    <h3 class="text-3xl font-bold text-brand-ink tracking-tight mb-2">Featured <span class="italic font-light text-gray-500">Projects.</span></h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <div class="premium-card p-6 border-t-4 border-t-brand-accent flex flex-col h-full bg-white shadow-xl shadow-gray-200/50">
+                        <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">Game Development</h4>
+                        <h3 class="text-2xl font-bold text-brand-ink leading-tight mb-4">Arcana of Honor</h3>
+                        <p class="text-base text-gray-600 leading-relaxed font-light">
+                            A turn-based card-battler strategy game (Greenfoot) featuring tactical 2v2 combat and hero skill management.
+                        </p>
+                    </div>
+
+                    <div class="premium-card p-6 border-t-4 border-t-brand-accent flex flex-col h-full bg-white shadow-xl shadow-gray-200/50">
+                        <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">RPG Prototype</h4>
+                        <h3 class="text-2xl font-bold text-brand-ink leading-tight mb-4">Quizzard</h3>
+                        <p class="text-base text-gray-600 leading-relaxed font-light">
+                            A VB.NET RPG prototype blending study materials with turn-based combat mechanics.
+                        </p>
+                    </div>
+
+                    <div class="premium-card p-6 border-t-4 border-t-brand-accent flex flex-col h-full bg-white shadow-xl shadow-gray-200/50">
+                        <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">Esports Analytics</h4>
+                        <h3 class="text-2xl font-bold text-brand-ink leading-tight mb-4">MetaDawn</h3>
+                        <p class="text-base text-gray-600 leading-relaxed font-light">
+                            An automated, data-driven esports platform for Mobile Legends: Bang Bang, providing objective drafting analytics based on global win-rate statistics.
+                        </p>
+                    </div>
+
+                    <div class="premium-card p-6 border-t-4 border-t-brand-accent flex flex-col h-full bg-white shadow-xl shadow-gray-200/50">
+                        <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">Adventure Game</h4>
+                        <h3 class="text-2xl font-bold text-brand-ink leading-tight mb-4">Beastborn Chronicles</h3>
+                        <p class="text-base text-gray-600 leading-relaxed font-light">
+                            A fantasy adventure game (VB.NET) focused on resource management, leveling, and evolution mechanics for the creature 'Varexon'.
+                        </p>
+                    </div>
+
+                    <div class="premium-card p-6 border-t-4 border-t-brand-accent flex flex-col h-full bg-white shadow-xl shadow-gray-200/50">
+                        <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">Combat Game</h4>
+                        <h3 class="text-2xl font-bold text-brand-ink leading-tight mb-4">Math Shodown</h3>
+                        <p class="text-base text-gray-600 leading-relaxed font-light">
+                            An event-driven, turn-based combat game (VB.NET) using timer-based animation and state management.
+                        </p>
+                    </div>
+
+                    <div class="premium-card p-6 border-t-4 border-t-brand-accent flex flex-col h-full bg-white shadow-xl shadow-gray-200/50">
+                        <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">Competitive Arcade</h4>
+                        <h3 class="text-2xl font-bold text-brand-ink leading-tight mb-4">Neon Maze Dash</h3>
+                        <p class="text-base text-gray-600 leading-relaxed font-light">
+                            A fast-paced 2-player competitive maze game (VB.NET) featuring dash mechanics and stage progression.
+                        </p>
+                    </div>
+
+                    <div class="premium-card p-6 border-t-4 border-t-brand-accent flex flex-col h-full bg-white shadow-xl shadow-gray-200/50 md:col-span-2">
+                        <h4 class="text-sm font-bold text-brand-accent uppercase tracking-widest mb-1">Desktop Application</h4>
+                        <h3 class="text-2xl font-bold text-brand-ink leading-tight mb-4">Dormify</h3>
+                        <p class="text-base text-gray-600 leading-relaxed font-light">
+                            A centralized Dormitory Management System desktop application utilizing relational schema design, SQL, and robust data integrity workflows.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <portfolio-footer></portfolio-footer>
+</body>
+</html>
